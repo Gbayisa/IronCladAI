@@ -11,131 +11,139 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
 </head>
 <body class="antialiased bg-body text-body font-body">
-    <div>
-        <!-- Navbar Section -->
-        <section x-data="{ mobileNavOpen: false }">
+<div class="">
+
+    <!-- Navbar Section -->
+    <section x-data="{ mobileNavOpen: false }" class="">
+        <div class="container px-4 mx-auto">
+            <nav class="flex justify-between items-center py-6">
+                <a class="text-3xl font-semibold leading-none" href="#">
+                    <img class="h-32" src="images/ironclad-ai.jpg" alt="" width="auto">
+                </a>
+                <div class="lg:hidden">
+                    <button x-on:click="mobileNavOpen = !mobileNavOpen"
+                            class="flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                        <svg class="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Mobile menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12"></ul>
+                <div class="hidden lg:block"></div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section x-data="{ mobileNavOpen: false }">
+        <div class="md:pb-20 bg-top bg-cover bg-no-repeat"
+             style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;h=450&amp;q=80&amp;blend=1e293b&amp;sat=30&amp;blend-mode=multiply')">
             <div class="container px-4 mx-auto">
-                <nav class="flex justify-between items-center py-6">
-                    <a class="text-3xl font-semibold leading-none" href="#">
-                        <img class="h-32" src="images/ironclad-ai.jpg" alt="" width="auto">
-                    </a>
-                    <div class="lg:hidden">
-                        <button x-on:click="mobileNavOpen = !mobileNavOpen" class="flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
-                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <title>Mobile menu</title>
-                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
-                        <li></li>
-                        <li class="smooth-scroll"></li>
-                    </ul>
-                    <div class="hidden lg:block"></div>
-                </nav>
-            </div>
-            <div :class="{ 'block': mobileNavOpen, 'hidden': !mobileNavOpen }" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-                <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-blueGray-800 opacity-25"></div>
-                <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
-                    <div class="flex items-center mb-8">
-                        <a class="mr-auto text-3xl font-semibold leading-none" href="#">
-                            <img class="h-10" src="metis-assets/logos/metis/metis.svg" alt="" width="auto">
-                        </a>
-                        <button x-on:click="mobileNavOpen = !mobileNavOpen">
-                            <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <ul>
-                        <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#product">Product</a></li>
-                        <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#contact-us">Contact us</a></li>
-                        <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#about-us">About Us</a></li>
-                        <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#key-features">Features</a></li>
-                    </ul>
-                    <div class="mt-4 pt-6 border-t border-blueGray-100">
-                        <a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a>
-                        <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a>
-                    </div>
-                    <div class="mt-auto">
-                        <p class="my-4 text-xs text-blueGray-400">
-                            <span>Get in Touch</span>
-                            <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a>
+                <div class="py-12 text-center">
+                    <div class="max-w-lg mx-auto mb-8">
+                        <h2 class="text-3xl md:text-4xl mb-4 text-white font-bold font-heading">
+                            <span>The ultimate AI solution for secure and scalable operations</span>
+                        </h2>
+                        <p class="text-blueGray-400 leading-relaxed">
+                            At IronCladAI, we empower businesses to deploy Large Language Models (LLMs) onsite with
+                            unmatched data security, scalability, and efficiency. Tailored for industries dealing with
+                            sensitive data, our solutions seamlessly integrate into your infrastructure to enhance
+                            productivity, compliance, and decision-making.
                         </p>
-                        <a class="inline-block px-1" href="#">
-                            <img src="metis-assets/icons/facebook-blue.svg" alt="">
-                        </a>
-                        <a class="inline-block px-1" href="#">
-                            <img src="metis-assets/icons/twitter-blue.svg" alt="">
-                        </a>
-                        <a class="inline-block px-1" href="#">
-                            <img src="metis-assets/icons/instagram-blue.svg" alt="">
-                        </a>
                     </div>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Hero Section -->
-        <section x-data="{ mobileNavOpen: false }">
-            <div class="md:pb-20 bg-top bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&h=450&q=80&blend=1e293b&sat=30&blend-mode=multiply')">
-                <div class="container px-4 mx-auto">
-                    <div class="py-12 text-center">
-                        <div class="max-w-lg mx-auto mb-8">
-                            <h2 class="text-3xl md:text-4xl mb-4 text-white font-bold font-heading">
-                                <span>The ultimate AI solution for secure and scalable operations</span>
-                            </h2>
-                            <p class="text-blueGray-400 leading-relaxed">
-                                At IronCladAI, we empower businesses to deploy Large Language Models (LLMs) onsite with unmatched data security, scalability, and efficiency.
-                            </p>
-                        </div>
-                        <div>
-                            <a class="block sm:inline-block py-4 px-8 text-xs text-blueGray-100 hover:text-blueGray-200 text-center font-semibold leading-none border border-blueGray-200 hover:border-blueGray-300 rounded" href="https://github.com/Gbayisa/IronCladAI/wiki" target="_blank" rel="noopener noreferrer">Documentation</a>
-                        </div>
+                    <div>
+                        <a class="block sm:inline-block py-4 px-8 text-xs text-blueGray-100 hover:text-blueGray-200 text-center font-semibold leading-none border border-blueGray-200 hover:border-blueGray-300 rounded"
+                           href="https://github.com/Gbayisa/IronCladAI/wiki" target="_blank" rel="noopener noreferrer">
+                            Documentation
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Key Features Section -->
-        <section id="key-features" class="py-12 md:py-32">
-            <div class="container px-4 mx-auto">
-                <div class="flex flex-wrap lg:flex-nowrap">
-                    <!-- Add your Key Features here -->
+    <!-- Key Features Section -->
+    <section id="key-features" class="py-12 md:py-32">
+        <div class="container px-4 mx-auto">
+            <div class="flex flex-wrap lg:flex-nowrap">
+                <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0">
+                    <img class="relative mx-auto rounded-xl w-full z-10"
+                         src="https://images.unsplash.com/photo-1484308129484-ff3063eea281?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
+                         alt="">
+                    <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12" src="metis-assets/elements/blob-tear.svg"
+                         alt="">
+                    <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" src="metis-assets/elements/blob-tear.svg"
+                         alt="">
+                </div>
+                <div class="w-full lg:w-1/2 lg:order-1">
+                    <div class="py-6 lg:pl-32">
+                        <div class="mb-4">
+                            <span class="text-xs py-1 px-3 text-blue-600 font-semibold bg-blue-50 rounded-xl">Lorem ipsum</span>
+                            <h2 class="text-4xl mt-3 font-bold font-heading">Key Features</h2>
+                        </div>
+                        <div class="flex items-start py-4">
+                            <div class="w-8 mr-5 text-blue-500">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="mb-2 text-xl font-semibold font-heading">Easy to customize</h3>
+                                <p class="text-blueGray-400 leading-loose">
+                                    Our solution offers unparalleled flexibility, enabling you to tailor workflows,
+                                    integrations, and features to match your company’s unique requirements.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact-us" class="relative">
-            <div class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blue-600">
-                <div class="flex items-end h-full">
-                    <img class="lg:max-w-lg mx-auto" src="metis-assets/illustrations/gamer.png" alt="">
-                </div>
-            </div>
-            <div class="container px-4 mx-auto">
-                <div class="relative flex flex-wrap">
-                    <div class="w-full lg:w-1/2 py-16 lg:pr-20">
+    <!-- Contact Section -->
+    <section id="contact-us" class="relative">
+        <div class="container px-4 mx-auto">
+            <div class="relative flex flex-wrap">
+                <div class="w-full lg:w-1/2 py-16 lg:pr-20">
+                    <div class="mb-6">
+                        <p class="text-sm text-blueGray-400">We will be glad to hear from you</p>
                         <h2 class="text-4xl">Get in touch!</h2>
-                        <form action="https://formsubmit.co/gbayisa.ironcladai@gmail.com" method="POST">
-                            <input type="hidden" name="_honey" style="display:none">
-                            <input type="hidden" name="_next" value="https://gbayisa.github.io/IronCladAI/thank-you.html">
-                            <input type="hidden" name="_subject" value="New Contact Form Submission">
-                            <div class="mb-4">
-                                <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none" type="text" name="name" placeholder="Name" required>
-                            </div>
-                            <div class="mb-4">
-                                <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none" type="email" name="email" placeholder="Email Address" required>
-                            </div>
-                            <div class="mb-4">
-                                <textarea class="w-full h-24 p-4 text-xs font-semibold leading-none resize-none bg-blueGray-50 rounded outline-none" name="message" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button class="block w-full py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded" type="submit">Submit</button>
-                        </form>
                     </div>
+                    <form action="https://formsubmit.co/gbayisa.ironcladai@gmail.com" method="POST">
+                        <!-- Anti-spam honeypot -->
+                        <input type="hidden" name="_honey" style="display:none">
+                        <!-- Redirect to Thank You Page -->
+                        <input type="hidden" name="_next" value="https://gbayisa.github.io/IronCladAI/thank-you.html">
+                        <!-- Subject -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <!-- Name -->
+                        <div class="mb-4">
+                            <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none"
+                                   type="text" name="name" placeholder="Name" required>
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none"
+                                   type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <!-- Message -->
+                        <div class="mb-4">
+                            <textarea class="w-full h-24 p-4 text-xs font-semibold leading-none resize-none bg-blueGray-50 rounded outline-none"
+                                      name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <!-- Submit -->
+                        <button class="block w-full py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded"
+                                type="submit">Submit
+                        </button>
+                    </form>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>
