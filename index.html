@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
+    <link rel="stylesheet" href="../public/css/tailwind/tailwind.min.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/shuffle-for-tailwind.png" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="container px-4 mx-auto">
+          <nav class="flex justify-between items-center py-6"><a class="text-3xl font-semibold leading-none" href="#"><img class="h-32" src="../public/images/ironclad-ai.jpg" alt="" width="auto" />
+          </a>
+            <div class="lg:hidden">
+              <button class="flex items-center py-2 px-3 text-blue-600 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300" x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg class="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li>        </li>
+              <li class="smooth-scroll">      </li>
+            </ul>
+            <div class="hidden lg:block"></div>
+          </nav>
+        </div>
+        <div class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}">
+          <div class="fixed inset-0 bg-blueGray-800 opacity-25" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8"><a class="mr-auto text-3xl font-semibold leading-none" href="#"><img class="h-10" src="../public/metis-assets/logos/metis/metis.svg" alt="" width="auto" />
+            </a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#product">Product</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#contact-us">Contact us</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#about-us">About Us</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#key-features">Features</a></li>
+              </ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100"><a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a><a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a></div>
+            </div>
+            <div class="mt-auto">
+              <p class="my-4 text-xs text-blueGray-400"><span>Get in Touch</span>          <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a></p><a class="inline-block px-1" href="#"><img src="metis-assets/icons/facebook-blue.svg" alt=""/></a>        <a class="inline-block px-1" href="#"><img src="metis-assets/icons/twitter-blue.svg" alt=""/></a>        <a class="inline-block px-1" href="#"><img src="metis-assets/icons/instagram-blue.svg" alt=""/></a>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section x-data="{ mobileNavOpen: false }">
+        <div class="md:pb-20 bg-top bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;h=450&amp;q=80&amp;blend=1e293b&amp;sat=30&amp;blend-mode=multiply')">
+          <div class="container px-4 mx-auto">
+            <div class="py-12 text-center">
+              <div class="max-w-lg mx-auto mb-8">
+                <h2 class="text-3xl md:text-4xl mb-4 text-white font-bold font-heading"><span>The ultimate AI solution for secure and scalable operations</span></h2>
+                <p class="text-blueGray-400 leading-relaxed">            At IronCladAI, we empower businesses to deploy Large Language Models (LLMs) onsite with unmatched data security, scalability, and efficiency. Tailored for industries dealing with sensitive data, our solutions seamlessly integrate into your infrastructure to enhance productivity, compliance, and decision-making.          </p>
+              </div>
+              <div><a class="block sm:inline-block py-4 px-8 text-xs text-blueGray-100 hover:text-blueGray-200 text-center font-semibold leading-none border border-blueGray-200 hover:border-blueGray-300 rounded" href="https://github.com/Gbayisa/IronCladAI/wiki" target="_blank" rel="noopener noreferrer">            Documentation          </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-center max-w-4xl mx-auto pt-12 pb-4">
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"></div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"></div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"></div>
+            <div class="w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"></div>
+            <div class="hidden md:block w-1/2 md:w-1/3 lg:w-1/5 px-3 mb-8"></div>
+          </div>
+        </div>
+        <div class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}">
+          <div class="fixed inset-0 bg-blueGray-800 opacity-25" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
+          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8"><a class="mr-auto text-3xl font-semibold leading-none" href="#"><img class="h-10" src="metis-assets/logos/metis/metis.svg" alt="" width="auto"/></a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <ul>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Product</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Company</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">About Us</a></li>
+                <li class="mb-1"><a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" href="#">Features</a></li>
+              </ul>
+              <div class="mt-4 pt-6 border-t border-blueGray-100"><a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" href="#">Sign Up</a>          <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a></div>
+            </div>
+            <div class="mt-auto">
+              <p class="my-4 text-xs text-blueGray-400"><span>Get in Touch</span>          <a class="text-blue-600 hover:text-blue-600 underline" href="#">info@example.com</a></p><a class="inline-block px-1" href="#"><img src="metis-assets/icons/facebook-blue.svg" alt=""/></a>        <a class="inline-block px-1" href="#"><img src="metis-assets/icons/twitter-blue.svg" alt=""/></a>        <a class="inline-block px-1" href="#"><img src="metis-assets/icons/instagram-blue.svg" alt=""/></a>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="py-12 md:py-32" id="key-features">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap lg:flex-nowrap">
+            <div class="relative w-full lg:w-1/2 order-1 lg:order-0 my-12 lg:my-0"><img class="relative mx-auto rounded-xl w-full z-10" src="https://images.unsplash.com/photo-1484308129484-ff3063eea281?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1080&amp;q=80" alt=""/><img class="absolute top-0 left-0 w-40 -ml-12 -mt-12" src="../public/metis-assets/elements/blob-tear.svg" alt=""/><img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" src="../public/metis-assets/elements/blob-tear.svg" alt=""/></div>
+            <div class="w-full lg:w-1/2 lg:order-1">
+              <div class="py-6 lg:pl-32">
+                <div class="mb-4"><span class="text-xs py-1 px-3 text-blue-600 font-semibold bg-blue-50 rounded-xl">Lorem ipsum</span>
+                  <h2 class="text-4xl mt-3 font-bold font-heading">Key Features</h2>
+                </div>
+                <div class="flex items-start py-4">
+                  <div class="w-8 mr-5 text-blue-500">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="mb-2 text-xl font-semibold font-heading">Easy to customize</h3>
+                    <p class="text-blueGray-400 leading-loose">Our solution offers unparalleled flexibility, enabling you to tailor workflows, integrations, and features to match your company’s unique requirements. Whether you're automating processes or optimizing data handling, customization is at your fingertips.</p>
+                  </div>
+                </div>
+                <div class="flex items-start py-4">
+                  <div class="w-8 mr-5 text-blue-500">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="mb-2 text-xl font-semibold font-heading">Flexible software</h3>
+                    <p class="text-blueGray-400 leading-loose">Powered by a scalable architecture, our product adapts to your growth effortlessly. Integrate seamlessly with your existing systems, ensuring smooth deployment and efficient performance, no matter the workload.</p>
+                  </div>
+                </div>
+                <div class="flex items-start py-4">
+                  <div class="w-8 mr-5 text-blue-500">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="mb-2 text-xl font-semibold font-heading">Best access for all of the resources</h3>
+                    <p class="text-blueGray-400 leading-loose">Experience secure and centralized access to critical resources and insights. With our robust infrastructure and on-premises deployment, your sensitive data remains protected while boosting productivity across teams.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20" id="product">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap -mx-8">
+            <div class="w-full lg:w-1/2 px-8">
+              <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+                <h2 class="mb-4 text-3xl lg:text-4xl font-bold font-heading">Simplifying Your Integration Process</h2>
+                <p class="mb-8 leading-loose text-blueGray-400">            We begin with an introductory call to discuss your hardware requirements and understand your operational needs. This ensures that the solution is customized to meet your goals while maintaining efficiency and security.          </p>
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-8">
+              <ul class="space-y-12">
+                <li class="flex -mx-4">
+                  <div class="px-4"><span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">1</span></div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">Assemble On-Site Server</h3>
+                    <p class="text-blueGray-400 leading-loose">                Our team designs and prepares the server based on your tailored specifications, ensuring it’s optimized for your workload.              </p>
+                  </div>
+                </li>
+                <li class="flex -mx-4">
+                  <div class="px-4"><span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">2</span></div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">Install Server On-Site</h3>
+                    <p class="text-blueGray-400 leading-loose">                We handle the seamless installation of both hardware and software at your location, minimizing downtime and ensuring smooth deployment.              </p>
+                  </div>
+                </li>
+                <li class="flex -mx-4">
+                  <div class="px-4"><span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">3</span></div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">Grant Users Access & Set Up Software</h3>
+                    <p class="text-blueGray-400 leading-loose">                Finally, we configure the system, set up the software environment, and provide secure access for your team. Training and onboarding support are included to help you hit the ground running.              </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative" id="contact-us">
+        <div class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blue-600">
+          <div class="flex items-end h-full"><img class="lg:max-w-lg mx-auto" src="../public/metis-assets/illustrations/gamer.png" alt=""/></div>
+        </div>
+        <div class="container px-4 mx-auto">
+          <div class="relative flex flex-wrap">
+            <div class="w-full lg:w-1/2 py-16 lg:pr-20">
+              <div class="mb-6">
+                <p class="text-sm text-blueGray-400">We will be glad to hear from you</p>
+                <h2 class="text-4xl">Get in touch!</h2>
+              </div>
+              <div>
+                <form action="https://formspree.io/f/mb1jvwzd" method="post" enctype="multipart/form-data"> 
+                  <div class="mb-4 text-sm"><span class="mr-4 font-semibold">Department:</span>
+                    <label class="mr-4">
+                      <input class="mr-1" type="radio" name="department" value="Support" checked="checked"/><span>Support</span>
+                    </label>
+                    <label>
+                      <input class="mr-1" type="radio" name="department" value="Sales"/><span>Sales</span>
+                    </label>
+                  </div> 
+                  <div class="mb-4">
+                    <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none" type="text" name="subject" placeholder="Subject" required=""/>
+                  </div> 
+                  <div class="mb-4">
+                    <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none" type="text" name="name" placeholder="Name" required=""/>
+                  </div> 
+                  <div class="mb-4">
+                    <input class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none" type="email" name="email" placeholder="name@example.com" required=""/>
+                  </div> 
+                  <div class="mb-4">
+                    <textarea class="w-full h-24 p-4 text-xs font-semibold leading-none resize-none bg-blueGray-50 rounded outline-none" name="message" placeholder="Message..." required=""></textarea>
+                  </div> 
+                  <div class="mb-4">
+                    <label class="flex px-2 bg-blueGray-50 rounded">
+                      <input class="hidden" type="file" name="file"/>
+                      <div class="my-1 ml-auto px-4 py-3 text-xs text-white font-semibold leading-none bg-blueGray-500 hover:bg-blueGray-600 rounded cursor-pointer">Browse</div>
+                    </label>
+                  </div> 
+                  <div>
+                    <label class="block mb-4">
+                      <input class="mr-1" id="terms" type="checkbox" name="terms" value="1" required=""/><span class="text-sm font-semibold">I agree to terms and conditions.</span>
+                    </label> 
+                    <button class="block w-full py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
