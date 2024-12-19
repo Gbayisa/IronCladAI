@@ -10,7 +10,7 @@ html(lang="en")
         script(src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js", defer="defer")
     body(class="antialiased bg-body text-body font-body")
         div(class="")
-            section(x-data="{ mobileNavOpen: false }")
+            section(x-data="{ mobileNavOpen: false }", class="")
                 div(class="container px-4 mx-auto")
                     nav(class="flex justify-between items-center py-6")
                         a(class="text-3xl font-semibold leading-none", href="#")
@@ -36,11 +36,11 @@ html(lang="en")
                         div
                             ul
                                 li(class="mb-1")
-                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#") Product
+                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#product") Product
                                 li(class="mb-1")
-                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#") Company
+                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#contact-us") Contact us
                                 li(class="mb-1")
-                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#") About Us
+                                    a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#about-us") About Us
                                 li(class="mb-1")
                                     a(class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600", href="#key-features") Features
                             div(class="mt-4 pt-6 border-t border-blueGray-100")
@@ -145,13 +145,13 @@ html(lang="en")
                                     div
                                         h3(class="mb-2 text-xl font-semibold font-heading") Best access for all of the resources
                                         p(class="text-blueGray-400 leading-loose") Experience secure and centralized access to critical resources and insights. With our robust infrastructure and on-premises deployment, your sensitive data remains protected while boosting productivity across teams.
-            section(class="py-20")
+            section(id="product", class="py-20")
                 div(class="container px-4 mx-auto")
                     div(class="flex flex-wrap -mx-8")
                         div(class="w-full lg:w-1/2 px-8")
                             div(class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0")
                                 h2(class="mb-4 text-3xl lg:text-4xl font-bold font-heading") Simplifying Your Integration Process
-                                p(class="mb-8 leading-loose text-blueGray-400") We begin with an introductory call to discuss your hardware requirements and understand your operational needs. This ensures that the solution is customized to meet your goals while maintaining efficiency and security.
+                                p(class="mb-8 leading-loose text-blueGray-400")             We begin with an introductory call to discuss your hardware requirements and understand your operational needs. This ensures that the solution is customized to meet your goals while maintaining efficiency and security.          
                         div(class="w-full lg:w-1/2 px-8")
                             ul(class="space-y-12")
                                 li(class="flex -mx-4")
@@ -159,55 +159,20 @@ html(lang="en")
                                         span(class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600") 1
                                     div(class="px-4")
                                         h3(class="my-4 text-xl font-semibold") Assemble On-Site Server
-                                        p(class="text-blueGray-400 leading-loose") Our team designs and prepares the server based on your tailored specifications, ensuring it’s optimized for your workload.
+                                        p(class="text-blueGray-400 leading-loose")                 Our team designs and prepares the server based on your tailored specifications, ensuring it’s optimized for your workload.              
                                 li(class="flex -mx-4")
                                     div(class="px-4")
                                         span(class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600") 2
                                     div(class="px-4")
                                         h3(class="my-4 text-xl font-semibold") Install Server On-Site
-                                        p(class="text-blueGray-400 leading-loose") We handle the seamless installation of both hardware and software at your location, minimizing downtime and ensuring smooth deployment.
+                                        p(class="text-blueGray-400 leading-loose")                 We handle the seamless installation of both hardware and software at your location, minimizing downtime and ensuring smooth deployment.              
                                 li(class="flex -mx-4")
                                     div(class="px-4")
                                         span(class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600") 3
                                     div(class="px-4")
                                         h3(class="my-4 text-xl font-semibold") Grant Users Access & Set Up Software
-                                        p(class="text-blueGray-400 leading-loose") Finally, we configure the system, set up the software environment, and provide secure access for your team. Training and onboarding support are included to help you hit the ground running.
-            section(id="about-us", class="py-20")
-                div(class="container px-4 mx-auto")
-                    div(class="max-w-lg mx-auto mb-12 text-center")
-                        span(class="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-600 rounded-xl") About us
-                        h2(class="text-3xl md:text-4xl mt-2 mb-4 font-bold font-heading") Meet Our Team
-                        p(class="text-blueGray-400 leading-loose") Bringing extensive expertise in Data Management, Cybersecurity, and Business Development.
-                    div(class="flex flex-wrap -mx-3 -mb-12")
-                        | 
-                        div(class="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12")
-                            img(class="h-64 w-64 rounded object-cover", src="images/Gideon-Pic.jpg", alt="Julie Bailey")
-                            div(class="pt-6 md:pt-2 md:pl-6")
-                                p(class="text-xl") Gideon Bayisa
-                                p(class="my-2 text-blue-600") CEO/Founder
-                                p(class="leading-loose text-blueGray-400") Gideon brings a wealth of expertise in Data and Artificial Intelligence across diverse environments, from innovative startups to enterprise solutions, driving forward-thinking strategies for scalable success.
-                        | 
-                        div(class="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12")
-                            img(class="h-64 w-64 rounded object-cover", src="images/yanni-pic.jpg", alt="Tom Brown")
-                            div(class="pt-6 md:pt-2 md:pl-6")
-                                p(class="text-xl") Ioannis Papas
-                                p(class="my-2 text-blue-600") Director, Product Development
-                                p(class="leading-loose text-blueGray-400") With deep operational and business acumen, Ioannis bridges strategy and execution, ensuring streamlined product development that meets market demands with precision.
-                        | 
-                        div(class="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12")
-                            img(class="h-64 w-64 rounded object-cover", src="images/robel-pic.jpg", alt="Anne Jones")
-                            div(class="pt-6 md:pt-2 md:pl-6")
-                                p(class="text-xl") Robel Bayisa
-                                p(class="my-2 text-blue-600") Head of Operations
-                                p(class="leading-loose text-blueGray-400") A cyber security engineer by profession, Robel excels at implementing robust server infrastructures, ensuring secure and seamless operations across all systems.
-                        | 
-                        div(class="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12")
-                            img(class="h-64 w-64 rounded object-cover", src="images/francesco-pic.jpg", alt="Julie Bailey")
-                            div(class="pt-6 md:pt-2 md:pl-6")
-                                p(class="text-xl") Francesco Ceruzzi
-                                p(class="my-2 text-blue-600") Head of Development
-                                p(class="leading-loose text-blueGray-400") Francesco combines his expertise as a cyber security engineer with a strong grasp of development and sales, delivering solutions that are both secure and tailored to client needs.
-            section(class="relative")
+                                        p(class="text-blueGray-400 leading-loose")                 Finally, we configure the system, set up the software environment, and provide secure access for your team. Training and onboarding support are included to help you hit the ground running.              
+            section(data-from-ai="false", id="contact-us", class="relative")
                 div(class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blue-600")
                     div(class="flex items-end h-full")
                         img(class="lg:max-w-lg mx-auto", src="metis-assets/illustrations/gamer.png", alt="")
@@ -218,7 +183,8 @@ html(lang="en")
                                 p(class="text-sm text-blueGray-400") We will be glad to hear from you
                                 h2(class="text-4xl") Get in touch!
                             div
-                                form(action="https://formspree.io/f/mb1jvwzd", method="post", enctype="multipart/form-data", onsubmit="return validateForm();")
+                                form(action="https://formspree.io/f/mb1jvwzd", method="post", enctype="multipart/form-data", onsubmit="return validateForm();", data-np-intersection-state="visible")
+                                    | 
                                     div(class="mb-4 text-sm")
                                         span(class="mr-4 font-semibold") Department:
                                         label(class="mr-4")
@@ -227,20 +193,27 @@ html(lang="en")
                                         label
                                             input(class="mr-1", type="radio", name="department", value="Sales")
                                             span Sales
+                                    | 
                                     div(class="mb-4")
                                         input(class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none", type="text", name="subject", placeholder="Subject", required="")
+                                    | 
                                     div(class="mb-4")
                                         input(class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none", type="text", name="name", placeholder="Name", required="")
+                                    | 
                                     div(class="mb-4")
                                         input(class="w-full p-4 text-xs font-semibold leading-none bg-blueGray-50 rounded outline-none", type="email", name="email", placeholder="name@example.com", required="")
+                                    | 
                                     div(class="mb-4")
                                         textarea(class="w-full h-24 p-4 text-xs font-semibold leading-none resize-none bg-blueGray-50 rounded outline-none", name="message", placeholder="Message...", required="")
+                                    | 
                                     div(class="mb-4")
                                         label(class="flex px-2 bg-blueGray-50 rounded")
                                             input(class="hidden", type="file", name="file")
                                             div(class="my-1 ml-auto px-4 py-3 text-xs text-white font-semibold leading-none bg-blueGray-500 hover:bg-blueGray-600 rounded cursor-pointer") Browse
+                                    | 
                                     div
                                         label(class="block mb-4")
-                                            input(class="mr-1", id="terms", type="checkbox", name="terms", value="1")
+                                            input(class="mr-1", id="terms", type="checkbox", name="terms", value="1", required="")
                                             span(class="text-sm font-semibold") I agree to terms and conditions.
+                                        | 
                                         button(class="block w-full py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded", type="submit") Submit
